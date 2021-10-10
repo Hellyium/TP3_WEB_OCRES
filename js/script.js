@@ -16,7 +16,7 @@ function start() {
       // On récupère l'information principal
       const main = data.list[i].weather[0].main;
       const description = data.list[i].weather[0].description;
-      const temp = data.list[i].deg;
+      const temp = data.list[i].temp.day;
       const icon = apiWeather.getHTMLElementFromIcon(data.list[i].weather[0].icon);
 
       // Modifier le DOM
@@ -74,7 +74,7 @@ function actualiser() {
         // On récupère l'information principal
         const main = data.list[i].weather[0].main;
         const description = data.list[i].weather[0].description;
-        const temp = data.list[i].deg;
+        const temp = data.list[i].temp.day;
         const icon = apiWeather.getHTMLElementFromIcon(data.list[i].weather[0].icon);
   
         // Modifier le DOM
